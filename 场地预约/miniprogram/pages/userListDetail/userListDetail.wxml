@@ -1,0 +1,115 @@
+<view class='UCenter-bg'>
+      <view class="avator">
+                  <image  src="{{userInformation.avatarUrl}}"></image>
+      </view>
+<!-- <view class='text-xl text-xl' bindtap="modalinput">
+  <view>{{userInformation.nickName}}</view>
+</view> -->
+</view>
+
+<view class="blank"></view>
+<!-- 主体部分 -->
+<form bindsubmit="submit" bindreset="reset">
+<!-- 学生 -->
+<block wx:if="{{userInformation.identity==0}}">
+<view class="bottom_box">
+
+  
+  
+  <view class="bottom_card" >
+            <view class="bottom_1">
+                  <image src="/images/活动.png"></image>
+                  <view>姓名：</view>
+                  <input placeholder="请输入姓名" name="name" value="{{userInformation.name}}"> </input>
+            </view>
+      </view>
+
+
+      <view class="bottom_card" >
+            <view class="bottom_1">
+                  <image src="/images/活动.png"></image>
+                  <view>导师：</view>
+                  <input placeholder="请输入导师" name="teacher" value="{{userInformation.teacher}}"> </input>
+            </view>
+      </view>
+      <view class="bottom_card" >
+            <view class="bottom_1">
+                  <image src="/images/标签.png"></image>
+                  <view>电话：</view>
+                  <input placeholder="请输入电话" name="tel" value="{{userInformation.tel}}"> </input>
+            </view>
+      </view>
+      <view class="bottom_card" >
+            <view class="bottom_1">
+                  <image src="/images/活动.png"></image>
+                  <view>学院：</view>
+                  <input placeholder="请输入学院" name="college" value="{{userInformation.college}}"> </input>
+            </view>
+      </view>
+      <view class="bottom_card" >
+            <view class="bottom_1">
+                  <image src="/images/标签.png"></image>
+                  <view>学号：</view>
+                  <input placeholder="请输入学号" name="num" value="{{userInformation.num}}"> </input>
+            </view>
+      </view>
+      <view class="btn-area">
+      <!-- 这里提交用form-type组件，会提交表单的value值，bandtap不行 -->
+        <button class="btn_submin" form-type="submit" type="primary" >保存修改</button>
+      <button  class="btn_reset"  style="margin: 30rpx 0" bindtap="delete" type="warn" data-src="{{img}}" >删除用户信息</button>
+      </view>
+      
+</view>
+</block>
+<!-- 老师 -->
+<block wx:if="{{userInformation.identity==1}}">
+<view class="bottom_box">
+
+  
+  
+  <view class="bottom_card" >
+            <view class="bottom_1">
+                  <image src="/images/活动.png"></image>
+                  <view>姓名：</view>
+                  <input placeholder="请输入姓名" name="name" value="{{userInformation.name}}"> </input>
+            </view>
+      </view>
+
+
+      <!-- <view class="bottom_card" >
+            <view class="bottom_1">
+                  <image src="/images/活动.png"></image>
+                  <view>导师：</view>
+                  <input placeholder="请输入导师" name="teacher" value="{{userInformation.teacher}}"> </input>
+            </view>
+      </view> -->
+      <view class="bottom_card" >
+            <view class="bottom_1">
+                  <image src="/images/标签.png"></image>
+                  <view>电话：</view>
+                  <input placeholder="请输入电话" name="tel" value="{{userInformation.tel}}"> </input>
+            </view>
+      </view>
+      <view class="bottom_card" >
+            <view class="bottom_1">
+                  <image src="/images/活动.png"></image>
+                  <view>学院：</view>
+                  <input placeholder="请输入学院" name="college" value="{{userInformation.college}}"> </input>
+            </view>
+      </view>
+      <view class="bottom_card" >
+            <view class="bottom_1">
+                  <image src="/images/标签.png"></image>
+                  <view>工号：</view>
+                  <input placeholder="请输入学号" name="num" value="{{userInformation.num}}"> </input>
+            </view>
+      </view>
+      <view class="btn-area">
+      <!-- 这里提交用form-type组件，会提交表单的value值，bandtap不行 -->
+        <button class="btn_submin" form-type="submit" type="primary" >保存修改</button>
+      <button  class="btn_reset"  style="margin: 30rpx 0" bindtap="delete" type="warn" data-src="{{img}}" >删除用户信息</button>
+      </view>
+      
+</view>
+</block>
+</form>

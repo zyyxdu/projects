@@ -1,0 +1,70 @@
+
+<view class="top-bg" style="background-image: url('/images/login_bg.png')"></view>
+
+<view class="contain">
+  <form bindsubmit="submit">
+
+
+  
+
+      <view class="card">
+            <view class="title">完善用户信息</view>
+
+            <!-- 选择身份 -->
+            <radio-group bindchange="xuanze" >
+            <radio checked ="true"  value="0">学生</radio>
+            <radio value="1">老师</radio>
+            </radio-group>
+
+            <!-- 条件渲染 -->
+            <!-- 学生填写列表 -->
+            <block wx:if="{{identity==0}}">
+             <view class="contact">
+                  <input bindinput="emInput" auto-focus name="name" value="{{name}}" maxlength="30" placeholder-class="pache" placeholder="请输入您的姓名" />
+            </view>
+            <view class="contact">
+                  <input bindinput="wxInput" auto-focus type="number" name="tel" value='{{tel}}' maxlength="30" placeholder-class="pache" placeholder="输入您的电话号" />
+            </view>
+            <view class="contact">
+                  <input bindinput="wxInput" auto-focus  name="college" value='{{college}}' maxlength="30" placeholder-class="pache" placeholder="输入您归属的学院" />
+            </view>
+            <view class="contact">
+                  <input bindinput="wxInput" auto-focus type="number" name="num" value='{{num}}' maxlength="30" placeholder-class="pache" placeholder="输入您的学号" />
+            </view>
+            <view class="contact">
+                  <input bindinput="wxInput" auto-focus name="teacher" value='{{teacher}}'  placeholder-class="pache" placeholder="请输入你的导师" />
+            </view>
+            </block>
+
+
+            <!-- 老师填写列表 -->
+            <block wx:if="{{identity==1}}">
+              <view class="contact">
+                  <input bindinput="emInput" auto-focus name="name" value="{{name}}" maxlength="30" placeholder-class="pache" placeholder="请输入您的姓名" />
+            </view>
+            <view class="contact">
+                  <input bindinput="wxInput" auto-focus type="number" name="tel" value='{{tel}}' maxlength="30" placeholder-class="pache" placeholder="输入您的电话号" />
+            </view>
+            <view class="contact">
+                  <input bindinput="wxInput" auto-focus  name="college" value='{{college}}' maxlength="30" placeholder-class="pache" placeholder="输入您归属的学院" />
+            </view>
+            <view class="contact">
+                  <input bindinput="wxInput" auto-focus type="number" name="num" value='{{num}}' maxlength="30" placeholder-class="pache" placeholder="输入您的工号" />
+            </view>
+            
+            </block>
+           
+      </view>
+
+
+
+      <!--底部确认-->
+      <button class="confirm" form-type="submit">确定</button>
+      <view class="shen_title">
+            <image class="about" src="/images/about.png" />使用申明
+      </view>
+      <view class="des">1. 在未经您同意及确认之前，本程序不会将您的注册信息用于任何其它商业目的。</view>
+      <view class="des">2. 本程序将对您所提供的资料进行严格的管理及保护，以防止您的个人资料丢失、被盗用或遭篡改。</view>
+      <view class="des">3. 请您放心使用！</view>
+</form>
+    </view>

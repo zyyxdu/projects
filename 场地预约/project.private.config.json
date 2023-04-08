@@ -1,0 +1,267 @@
+{
+  "setting": {
+    "compileHotReLoad": true
+  },
+  "description": "项目私有配置文件。此文件中的内容将覆盖 project.config.json 中的相同字段。项目的改动优先同步到此文件中。详见文档：https://developers.weixin.qq.com/miniprogram/dev/devtools/projectconfig.html",
+  "condition": {
+    "miniprogram": {
+      "list": [
+        {
+          "name": "db guide",
+          "pathName": "pages/databaseGuide/databaseGuide",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "pages/index/index",
+          "pathName": "pages/index/index",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "pages/login/login",
+          "pathName": "pages/login/login",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "pages/my/my",
+          "pathName": "pages/my/my",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "pages/message/message",
+          "pathName": "pages/message/message",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "pages/messageCreate/messageCreate",
+          "pathName": "pages/messageCreate/messageCreate",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "pages/completeInformation/completeInformation",
+          "pathName": "pages/completeInformation/completeInformation",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "pages/home/home",
+          "pathName": "pages/home/home",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "pages/adminHome/adminHome",
+          "pathName": "pages/adminHome/adminHome",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "卡片用户",
+          "pathName": "pages/check_user_reserve/check_user_reserve",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "增加物品",
+          "pathName": "pages/add_product/add_product",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "pages/userListDetail/userListDetail",
+          "pathName": "pages/userListDetail/userListDetail",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "LOGIN",
+          "pathName": "pages/login/login",
+          "query": "",
+          "launchMode": "default",
+          "scene": null
+        },
+        {
+          "name": "添加物品",
+          "pathName": "pages/add_product/add_product",
+          "query": "",
+          "launchMode": "default",
+          "scene": null
+        },
+        {
+          "name": "商品展示",
+          "pathName": "pages/check_machine_resource/check_machine_resource",
+          "query": "",
+          "launchMode": "default",
+          "scene": null
+        },
+        {
+          "name": "HOME",
+          "pathName": "pages/home/home",
+          "query": "",
+          "launchMode": "default",
+          "scene": null
+        },
+        {
+          "name": "乐佳的发布咨询页面",
+          "pathName": "pages/messageCreate/messageCreate",
+          "query": "",
+          "launchMode": "default",
+          "scene": null
+        },
+        {
+          "name": "商品展示",
+          "pathName": "pages/check_machine_resource/check_machine_resource",
+          "query": "",
+          "launchMode": "default",
+          "scene": null
+        },
+        {
+          "name": "审批页面",
+          "pathName": "pages/check_user_reserve/check_user_reserve",
+          "query": "",
+          "launchMode": "default",
+          "scene": null
+        },
+        {
+          "name": "乐佳要加bottom的页面",
+          "pathName": "pages/messageDetail/messageDetail",
+          "query": "",
+          "launchMode": "default",
+          "scene": null
+        },
+        {
+          "name": "adminHome",
+          "pathName": "pages/adminHome/adminHome",
+          "query": "",
+          "launchMode": "default",
+          "scene": null
+        },
+        {
+          "name": "",
+          "pathName": "pages/locreserven_test3/locreserven_test3",
+          "query": "",
+          "launchMode": "default",
+          "scene": null
+        },
+        {
+          "name": "",
+          "pathName": "pages/locreserven_test3/locreserven_test3",
+          "query": "",
+          "launchMode": "default",
+          "scene": null
+        },
+        {
+          "name": "",
+          "pathName": "pages/locreserve_test3/locreserven_test3",
+          "query": "",
+          "launchMode": "default",
+          "scene": null
+        },
+        {
+          "name": "",
+          "pathName": "pages/locations/locations",
+          "query": "",
+          "launchMode": "default",
+          "scene": null
+        },
+        {
+          "name": "",
+          "pathName": "pages/login/login",
+          "query": "",
+          "launchMode": "default",
+          "scene": null
+        },
+        {
+          "name": "",
+          "pathName": "pages/completeInformation/completeInformation",
+          "query": "",
+          "launchMode": "default",
+          "scene": null
+        },
+        {
+          "name": "pages/check_machine_resource/check_machine_resource",
+          "pathName": "pages/check_machine_resource/check_machine_resource",
+          "query": "",
+          "launchMode": "default",
+          "scene": null
+        },
+        {
+          "name": "pages/locreserve_his2/locreserve_his2",
+          "pathName": "pages/locreserve_his2/locreserve_his2",
+          "query": "",
+          "launchMode": "default",
+          "scene": null
+        },
+        {
+          "name": "pages/adminLogin/adminLogin",
+          "pathName": "pages/adminLogin/adminLogin",
+          "query": "",
+          "launchMode": "default",
+          "scene": null
+        },
+        {
+          "name": "pages/my/my",
+          "pathName": "pages/my/my",
+          "query": "",
+          "launchMode": "default",
+          "scene": null
+        },
+        {
+          "name": "pages/check_user_reserve/check_user_reserve",
+          "pathName": "pages/check_user_reserve/check_user_reserve",
+          "query": "",
+          "launchMode": "default",
+          "scene": null
+        },
+        {
+          "name": "pages/loc_share/loc_share",
+          "pathName": "pages/loc_share/loc_share",
+          "query": "sharetype=1&reserve=%5Bobject%20Object%5D&is_able=1&is_use=1",
+          "launchMode": "default",
+          "scene": null
+        },
+        {
+          "name": "pages/new_locations/new_locations",
+          "pathName": "pages/new_locations/new_locations",
+          "query": "",
+          "launchMode": "default",
+          "scene": null
+        },
+        {
+          "name": "pages/new_show/new_show",
+          "pathName": "pages/new_show/new_show",
+          "query": "loc_id=f950bb746336594e004f4a913dd36a95",
+          "launchMode": "default",
+          "scene": null
+        },
+        {
+          "name": "pages/new_history/new_history",
+          "pathName": "pages/new_history/new_history",
+          "query": "",
+          "launchMode": "default",
+          "scene": null
+        },
+        {
+          "name": "pages/add_product/add_product",
+          "pathName": "pages/add_product/add_product",
+          "query": "",
+          "launchMode": "default",
+          "scene": null
+        },
+        {
+          "name": "pages/adminHome/adminHome",
+          "pathName": "pages/adminHome/adminHome",
+          "query": "",
+          "launchMode": "default",
+          "scene": null
+        }
+      ]
+    }
+  },
+  "projectname": "WeChatCompetition2022"
+}

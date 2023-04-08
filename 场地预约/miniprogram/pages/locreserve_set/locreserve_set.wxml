@@ -1,0 +1,46 @@
+
+<modal hidden="{{hiddenmodalput}}" title="是否设置不可预定" confirm-text="设置" cancel-text="取消" bindcancel="cancel" bindconfirm="confirm" data-id="{{idx}}">
+          
+</modal>
+
+
+
+<modal hidden="{{hiddenmodalput2}}" title="是否设置可预定" confirm-text="设置" cancel-text="取消" bindcancel="cancel" bindconfirm="confirm2" data-id="{{idx}}">
+          
+</modal>
+        
+        
+                    
+          <view class='containt'>
+            <scroll-view class="scroll-view_H" scroll-x>
+                <view class='list' style='width:{{ width }}rpx'>
+                    <view bindtap="select_date" wx:for="{{ calendar }}" wx:for-item="item" wx:for-index="index" data-index="{{ index }}" class='listItem {{index==currentIndex? "current":""}}' wx:key='' data-date="{{ item.date}}">
+                          <text class='name'>{{ item.week }}</text>
+                          <text class='date'>{{ item.date }}</text>
+                    </view>
+                </view>
+            </scroll-view>
+              
+                    
+            <view class='time'>
+                <view bindtap="get_current_index" wx:for="{{reserve_time_isAble}}" class='listItem 'wx:for-index="index" wx:key="{{index}}"  wx:key='' data-index="{{index}}">
+                    <view class="able_reserve">
+                        <text wx:if="{{item==true}}" bindtap="addReserve">{{timeList[index]}}   
+                            <text>可预订</text>
+                        </text>
+                    </view>
+           
+                    <view class="unable_reserve">
+                      <text wx:if="{{item==false}}" bindtap="addReserve2" data-id="{{index}}" over-stay-time="3000" >{{timeList[index]}}    
+                        <text>不可预订</text>
+                      </text>
+                    </view>
+          
+                </view>
+          
+            </view>
+          
+          </view>
+                    
+                    
+                  

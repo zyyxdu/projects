@@ -1,0 +1,24 @@
+<view class="sousuokuang">
+    <view class="sousuo">
+        <view class="shurukuang">
+            <input type="text" placeholder="搜索用户" value="" bindinput="GetSearchInput"></input>
+        </view>
+        <view class="sousuo_anniu" bindtap="ToSearch">
+            <text>搜索</text>
+            <icon type="search" size="20"></icon>
+        </view>
+
+        <view class="sousuo_anniu" bindtap="back">
+            <text>返回</text>
+        </view>
+    </view>
+</view>
+
+
+<view class='entity'wx:for="{{list}}" wx:for-index="index"  data-index="{{index}}" >
+    <view class='list_box'>名字：{{item.name}}  </view> 
+    <view class='list_box'> 性别：{{item.gender}}</view>
+    <view class='list_box'>学校：{{item.school}}</view>
+    <view class='list_box'wx:if="{{isAdd[index]==0}}"  bindtap="add_person" data-index="{{index}}" style="color: cyan;"> 添加与会人员</view>
+    <view class='list_box' wx:if="{{isAdd[index]==1}}" bindtap="del_person" data-index="{{index}}" style="color:firebrick"> 删除添加</view>
+</view>

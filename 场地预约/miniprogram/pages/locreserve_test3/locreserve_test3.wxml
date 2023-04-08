@@ -1,0 +1,110 @@
+
+<modal hidden="{{hiddenmodalput}}" title="是否预定" confirm-text="预定" cancel-text="取消" bindcancel="cancel" bindconfirm="confirm" data-id="{{idx}}">
+     
+  <view class="weui-cell weui-cell_input">
+
+            <view class="weui-cell__hd">
+              <text class="key">申请人：</text>
+            </view>
+
+            <view class="weui-cell__bd">{{user_name}}</view>
+  </view>
+
+  <view class="weui-cell weui-cell_input">
+
+        
+            <view class="weui-cell__hd">
+                <text class="key">会议介绍：</text>
+            </view>
+            
+           <!--  <textarea placeholder="请描述一下你的申请原因" value="{{textVal}}" bindinput="textInput" maxlength="50" >
+            </textarea>-->
+ 
+            <view class="weui-cell__bd">
+                <input class="weui-input" bindinput="Reason" name="reason" bindblur="getTitle" placeholder="请输入会议介绍"/>
+            </view> 
+  </view>
+
+  <view class="weui-cell weui-cell_input">
+        <view class="weui-cell__hd">
+              <text class="key">会议名字：</text>
+        </view>
+
+        <view class="weui-cell__bd">
+              <input class="weui-input" bindinput="Name" name="name" bindblur="getTitle" placeholder="请输入会议名字"/>
+        </view> 
+
+      <!--  <textarea placeholder="请描述一下你的申请原因" value="{{textVal}}" bindinput="textInput" maxlength="50" >
+</textarea>-->
+</view>
+
+
+<!--
+  <view class="weui-cell weui-cell_input" bindtap="add_person">
+    <view class="weui-cell__hd">
+        <text class="key">添加与会人员（可发消息通知）</text>
+    </view>
+
+    <view class="weui-cell__bd"> </view>
+</view>
+ -->           
+ <view class="weui-cell weui-cell_input" bindtap="push">
+    <view class="weui-cell__hd">
+        <text class="key">点击可发消息通知</text>
+    </view>
+
+    <view class="weui-cell__bd"> </view>
+</view>
+          
+</modal>
+                    
+
+                    
+          <view class='containt'>
+
+            <scroll-view class="scroll-view_H" scroll-x>
+                <view class='list' style='width:{{ width }}rpx'>
+                    <view bindtap="select_date" wx:for="{{ calendar }}" wx:for-item="item" wx:for-index="index" data-index="{{ index }}" class='listItem {{index==currentIndex? "current":""}}' wx:key='' data-date="{{ item.date}}">
+                          <text class='name'>{{ item.week }}</text>
+                          <text class='date'>{{ item.date }}</text>
+                    </view>
+                </view>
+            </scroll-view>
+              
+                    
+            <view class='time'>
+                <view bindtap="get_current_index" wx:for="{{reserve_time}}" class='listItem 'wx:for-index="index" wx:key="{{index}}"  wx:key='' data-index="{{index}}">
+
+                    <view wx:if="{{reserve_time_isAble[index]==true}}">
+                    
+                      <view class="reserved">
+                        <text wx:if="{{item[0]==true}}" bindtap="reserved_show">{{timeList[index]}}   
+                            <text>已预订</text>
+                        </text>
+                      </view>
+
+                      <view class="unreserved">
+                        <text wx:if="{{item[0]==false}}" bindtap="addReserve"  data-id="{{index}}" over-stay-time="3000" >{{timeList[index]}}    
+                            <text>可预订</text>
+                        </text>
+                      </view>
+           
+                    </view> 
+
+
+                    <view wx:if="{{reserve_time_isAble[index]==false}}">
+
+                       <view class="unable_reserve">
+                        <text  bindtap="reserved_show">{{timeList[index]}}   
+                            <text>不可预订</text>
+                        </text>
+                       </view>
+                    
+                    </view>
+
+
+                </view>
+          
+            </view>
+          
+          </view>

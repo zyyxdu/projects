@@ -1,0 +1,8 @@
+<!--pages/lll/lll.wxml-->
+<text bindtap="push">push</text>
+<button open-type="share">share</button>
+<text bindtap="add">add</text>
+<text bindtap="shouquan"> 授权</text>
+<text bindtap="message" > 发消息</text>
+
+

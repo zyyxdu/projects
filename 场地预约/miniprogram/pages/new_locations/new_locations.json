@@ -1,0 +1,7 @@
+{
+  "component": true,
+  "usingComponents": {
+    "custom-swiper": "/components/customSwiper/customSwiper"
+  },
+  "navigationBarTitleText": "场所"
+}

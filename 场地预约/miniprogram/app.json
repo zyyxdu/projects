@@ -1,0 +1,64 @@
+{
+  "pages": [
+    "pages/login/login",
+    "pages/test/test",
+    "pages/add_product/add_product",
+    "pages/userList/userList",
+    "pages/userListDetail/userListDetailt",
+    "pages/new_share/new_share",
+    "pages/new_locations/new_locations",
+    "pages/new_show/new_show",
+    "pages/new_history/new_history",
+    "pages/new_reserve/new_reserve",
+    
+    "pages/lll/lll",
+    "pages/adminHome/adminHome",
+    "pages/adminLogin/adminLogin",
+    "pages/check_machine_resource/check_machine_resource", 
+    "pages/check_user_reserve/check_user_reserve",
+    "pages/completeInformation/completeInformation",
+    "pages/detail/detail",
+    "pages/home/home",
+    "pages/loc_search_user/loc_search_user",
+    "pages/loc_share/loc_share",
+    "pages/locations/locations",
+    "pages/locreserve_his2/locreserve_his2",
+    "pages/locreserve_set/locreserve_set",
+    "pages/locreserve_test3/locreserve_test3",
+
+    "pages/my/my",
+    "pages/personalInformation/personalInformation"
+
+ 
+  ],
+  "window": {
+    "backgroundColor": "#F6F6F6",
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#F6F6F6",
+    "navigationBarTitleText": "ISET office",
+    "navigationBarTextStyle": "black"
+  },
+  "sitemapLocation": "sitemap.json",
+  "tabBar": {
+    "color": "#707070",
+    "selectedColor": "#000000",
+    "list": [
+      {
+        "pagePath": "pages/new_locations/new_locations",
+        "text": "预约",
+        "iconPath": "images/tabbar/publish.png",
+        "selectedIconPath": "images/tabbar/publish_on.png"
+      },
+      {
+        "pagePath": "pages/my/my",
+        "text": "我的",
+        "iconPath": "images/tabbar/my.png",
+        "selectedIconPath": "images/tabbar/my_on.png"
+      }
+    ]
+  },
+  "style": "v2",
+  "useExtendedLib": {
+    "weui": true
+  }
+}

@@ -1,0 +1,110 @@
+
+<modal hidden="{{hiddenmodalput}}" title="是否预定" confirm-text="预定" cancel-text="取消" bindcancel="cancel" bindconfirm="confirm" >
+    <view class="weui-cell weui-cell_input">
+      <view class="weui-cell__hd">
+        <text class="key">申请人：</text>
+      </view>
+
+      <view class="weui-cell__bd">{{user_name}}</view>
+    </view>
+
+    <view class="weui-cell weui-cell_input">
+      <view class="weui-cell__hd">
+          <text class="key">会议介绍：</text>
+      </view>
+
+      <view class="weui-cell__bd">
+           <input class="weui-input" bindinput="Reason" name="reason" bindblur="getTitle" placeholder="请输入会议概要"/>
+      </view>
+    </view>
+
+</modal>         
+
+
+
+
+
+
+
+<scroll-view class="scroll-view_H" scroll-x>
+
+    <view class='list' style='width:{{ width }}rpx'>
+        <view bindtap="select_date" wx:for="{{ calendar }}" wx:for-item="item" wx:for-index="index" data-index="{{ index }}" class='listItem {{index==currentIndex? "current":""}}' wx:key='' data-date="{{ item.date}}">
+              <text class='name'>{{ item.week }}</text>
+              <text class='date'>{{ item.date }}</text>
+        </view>
+    </view>
+
+    
+</scroll-view>
+
+
+<view class="unable">不可使用时间</view>
+
+
+ <view>
+    <scroll-view   scroll-y="true">
+     
+         <view class="time" wx:for="{{show_time}}"   wx:for-index="idx"   data-num="{{idx}}" >
+       <!--   {{item.hour}} : {{item.min}}-{{item.hour1}} : {{item.min1}} -->
+            
+            <view wx:if="{{item.min!=0&&item.min1!=0}}">
+              {{item.hour}} : {{item.min}}-{{item.hour1}} : {{item.min1}}
+            </view>
+            <view wx:if="{{item.min!=0 && item.min1==0}}">
+             {{item.hour}} : {{item.min}}-{{item.hour1}} : 00
+            </view>
+            <view wx:if="{{item.min==0&&item.min1!=0}}">
+               {{item.hour}} :00-{{item.hour1}} : {{item.min1}}
+            </view>
+        
+            <view wx:if="{{item.min==0&&item.min1==0}}">
+                 {{item.hour}} :00-{{item.hour1}} : 00
+            </view>
+           
+        </view>
+
+        
+        
+        
+        
+      
+    </scroll-view>
+  </view>
+
+
+<!-- <button bindtap="jump"> 点击跳转预约</button> -->
+
+<!-- <view class="shuru_list">
+  <input class="shuru_item" bindinput="shuru" placeholder="hour1"/>
+  <input class="shuru_item" bindinput="shuru" placeholder="hour2"/>
+  <view class="shuru_item">:</view>
+  <input class="shuru_item" bindinput="shuru" placeholder="min1"/>
+  <input class="shuru_item" bindinput="shuru" placeholder="min2"/>
+  
+</view> -->
+<!-- 两个时间选择器 -->
+
+<view class="section">
+  <view class="section__title"></view>
+  <picker mode="multiSelector" bindchange="bindMultiPickerChange" bindcolumnchange="bindMultiPickerColumnChange" value="{{multiIndex}}" range="{{multiArray}}">
+    <view class="picker">
+      开始时间：{{multiArray[0][multiIndex[0]]}}:{{multiArray[1][multiIndex[1]]}}
+    </view>
+  </picker>
+</view>
+
+
+
+<view class="section">
+  <view class="section__title"></view>
+  <picker bindchange="bindPickerChange" value="{{index}}" range="{{array}}">
+    <view class="picker">
+      持续时间：{{array[index]}}
+    </view>
+  </picker>
+</view>
+
+<button bindtap="addReserve" class="button">预约</button>
+
+

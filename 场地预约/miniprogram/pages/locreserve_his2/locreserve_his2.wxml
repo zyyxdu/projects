@@ -1,0 +1,99 @@
+<!--pages/order1/order1.wxml-->
+<modal hidden="{{hiddenmodalput}}" title="请长按保存二维码"  data-id="{{item._id}}" confirm-text="完成" cancel-text="取消" bindcancel="cancel" bindconfirm="confirm">
+    <view class="imagesize">
+        <image class="in-image" bindlongpress="savesignupimg"  src="{{fileID}}" mode="aspectFill"></image>
+    </view>
+    
+</modal>
+
+<view class="cu-card">
+ <view class="cu-item bg-img shadow-blur" style="background-image: linear-gradient(to bottom right,#03A9F4,#7C4DFF);" 
+  bindtap="geturl" data-url="{{item.url}}" data-upname="{{item.up_name}}" data-name="{{item.title}}"
+  data-num="{{item.num}}" data-code="{{item.code}}" data-openid="{{item._openid}}" data-resourceid="{{item._id}}"
+  wx:for="{{list}}" wx:key="true">
+    <view class="cardTitle">
+      {{item.title}}   <view>(按照申请时间降序)</view>
+     
+    </view>
+
+ </view>
+</view>
+
+
+
+
+<!-- 选择栏 -->
+<view class="allxuanze">
+
+    <view wx:for="{{all_reserve2}}" wx:key="_id" class="approving" wx:for-index="index" data-index="{{index}}">
+      <!-- 申请信息 -->
+      <view class="shenqingNote">
+        <view class="title">申请场地：{{item.location_name}}</view>
+        <view style="font-size: 37rpx; height: 65rpx;">申请时间：{{item.date_apply}} {{item.time_apply}}</view>
+        <view style="font-size: 37rpx; height: 65rpx;">预约时间：{{item.reserved_date}}  {{item.time_period}}</view>
+        <view style="font-size: 37rpx; height: 65rpx;">会议名称:  {{item.meeting_name}}</view>
+        <view style="font-size: 37rpx; height: 65rpx;">会议介绍：{{item.reason}}</view>
+      
+      </view>
+
+      <!-- 同意拒绝的横线 -->
+      <view class="line1"></view>
+      <!-- 拒绝，同意申请事件 
+    <view style="font-size: 45rpx; color: green; height: 65rpx;font-weight: 800; text-align: center;"  data-id="{{item._id}}">请等待审批</view>-->
+
+    <view wx:if="{{is_able[index]==0}}">
+      <view style="font-size: 40rpx; color:red; height: 65rpx;font-weight: 800;text-align: center;"  bindtap="qrcode" data-id="{{item._id}}">被设置成不可预约了
+        </view>
+       
+       <view style="font-size: 40rpx;height: 65rpx;font-weight: 400;color:coral;text-align: center;" bindtap="cancel_reserve" data-index="{{index}}">
+                删除记录
+       </view>
+        
+
+      <button open-type="share" data-index="{{index}}" style="font-size: 40rpx;height: 65rpx;font-weight: 400;color:rgb(91, 24, 214);text-align: center;">分享</button>
+      <!-- <view style="font-size: 40rpx;height: 65rpx;font-weight: 400;color:rgb(91, 24, 214);text-align: center;" bindtap="" data-index="{{index}}">
+                分享
+       </view>-->
+  
+    </view>
+
+   <view wx:if="{{is_able[index]==1}}">
+
+    <view wx:if="{{is_use[index] == 1}}" >
+       <view style="font-size: 40rpx; color: green; height: 65rpx;font-weight: 800;text-align: center;"  bindtap="qrcode" data-id="{{item._id}}">已完成
+        </view>
+       
+       <view style="font-size: 40rpx;height: 65rpx;font-weight: 400;color:coral;text-align: center;" bindtap="cancel_reserve" data-index="{{index}}">
+        删除记录
+      </view>
+
+       
+      <button open-type="share" data-index="{{index}}" style="font-size: 40rpx;height: 65rpx;font-weight: 400;color:rgb(91, 24, 214);text-align: center;">分享</button>
+      <!--
+       <view style="font-size: 40rpx;height: 65rpx;font-weight: 400;color:rgb(91, 24, 214);text-align: center;" bindtap="" data-index="{{index}}">
+                分享
+       </view>-->
+    </view>
+    
+
+    <view wx:if="{{is_use[index] ==0}}">
+      <view style="font-size: 40rpx; color: green; height: 65rpx;font-weight: 800;text-align: center;">
+        等待使用
+      </view>
+
+      <view style="font-size: 40rpx;height: 65rpx;font-weight: 400;color:coral;text-align: center;" bindtap="cancel_reserve" data-index="{{index}}">
+        取消预约
+      </view>
+
+      <button open-type="share" data-index="{{index}}" style="font-size: 40rpx;height: 60rpx;font-weight: 400;color:rgb(91, 24, 214);text-align: center;">分享</button>
+    </view>
+
+   </view>
+
+
+    </view>
+
+
+</view>
+
+  

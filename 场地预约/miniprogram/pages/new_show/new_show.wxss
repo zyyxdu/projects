@@ -1,0 +1,180 @@
+.scroll-view_H{
+  height: 128rpx;
+  width: 100%;
+}
+scroll-view .list{
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: flex-start;
+    width: 1302rpx; 
+}
+scroll-view .listItem{
+  text-align: center;
+  width: 186rpx;
+  height: 128rpx;
+  background-color: #f1f2f6;
+  padding-top: 30rpx;
+  box-sizing: border-box;
+  /* float: left; */
+  display: inline-block;
+}
+scroll-view .listItem text{
+  display: block;
+}
+scroll-view .listItem .name{
+  font-size: 30rpx;
+}
+scroll-view .listItem .date{
+  font-size: 30rpx;
+}
+scroll-view .current{
+  background-color: #76aef8;
+ 
+}
+scroll-view .current text{
+  color: #fff;
+}
+
+
+
+.unable{
+  margin-top:30rpx ;
+  text-align:center;
+  color: red;
+  font-size:37rpx;
+  height: 65rpx;
+  font-weight: bold;
+}
+
+.shuru_list{
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: flex-start;
+    width: 1302rpx; 
+}
+
+
+.shuru_item{
+  text-align: center;
+  width: 150rpx;
+  height: 128rpx;
+  background-color: #f1f2f6;
+  padding-top: 30rpx;
+  box-sizing: border-box;
+  /* float: left; */
+  display: inline-block;
+}
+
+
+
+
+
+
+.box{
+  height: 300rpx;
+}
+.box.scroll-view_time{
+  background-color:rgb(216, 141, 42);
+  height: 10rpx;
+  width: 100%;
+}
+
+.time{
+  text-align:center;
+  color: darkgrey;
+}
+
+.time .listItem{
+  width: 25%;
+  height: 135rpx;
+  text-align: center;
+  box-sizing: border-box;
+  background-color: #fff;
+  padding-top: 35rpx;
+  border: 1px solid #b9c1c8;
+}
+.time .listItem text{
+  display: block;
+  font-size: 30rpx;
+}
+/*
+.time .current{
+  color: #76aef8;
+}*/
+
+.time .reserved text{
+  color:rgb(183, 189, 196);
+}
+
+.time .unreserved text{
+  color:black;
+}
+.time .unable_reserve text{
+  color:rgb(255, 15, 15);
+}
+
+
+
+
+.entity{
+  background-color: rgb(255, 255, 255);
+}
+
+.item{
+  background-color: aliceblue;
+  display: flex;
+  padding: 20rpx;
+ /*color: rgb(10, 8, 8);*/
+  margin-top: 20rpx;
+  margin-left: 20rpx;
+  margin-right: 50rpx;
+  margin-bottom: 50rpx;
+  /*border: 1rpx solid rgb(10, 9, 9);
+  border-radius: 20rpx;*/
+  outline-color: blue;
+  outline-style:double;
+  outline-width: 8rpx;
+  padding-left: 200rpx;/*内边距*/
+  
+
+}
+
+
+
+.item.time{
+  box-sizing: border-box;
+}
+.entity.item.addHover{
+  
+  position: relative;
+  top: 3rpx;
+  left: 3rpx;
+  box-shadow:0px 0px 8px rgba(0, 0, 0, .1) inset; 
+}
+
+.item.btn{
+  width: 35%;
+  height: 550rpx;
+  display: flex;
+  flex-direction: row-reverse;
+  padding-right: 20rpx;
+  font-size: larger;
+
+}
+.section{
+  
+  border-style: inset;
+  text-align:center;
+  box-sizing: border-box;
+  width: 80%;
+  margin: auto;
+  margin-top: 30rpx;
+  
+
+ 
+}
+.button{
+  background-color: rgb(165, 192, 243);
+  margin-top: 40rpx;
+
+}
