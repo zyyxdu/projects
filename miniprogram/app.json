@@ -1,0 +1,80 @@
+{
+  "pages": [
+    "pages/login/login",
+    "pages/check_machine_resource/check_machine_resource",
+    "pages/check_user_reserve/check_user_reserve",
+    "pages/feedback_adm/feedback_adm",
+    "pages/feedback_handle/feedback_handle",
+    "pages/feedback_his/feedback_his",
+    "pages/feedback_sub/feedback_sub",
+    "pages/index/index",
+    "pages/userConsole/userConsole",
+    "pages/storageConsole/storageConsole",
+    "pages/databaseGuide/databaseGuide",
+    "pages/addFunction/addFunction",
+    "pages/deployFunctions/deployFunctions",
+    "pages/chooseLib/chooseLib",
+    "pages/openapi/openapi",
+    "pages/openapi/serverapi/serverapi",
+    "pages/openapi/callback/callback",
+    "pages/openapi/cloudid/cloudid",
+    "pages/im/im",
+    "pages/im/room/room",
+    "pages/home/home",
+    "pages/completeInformation/completeInformation",
+    "pages/adminHome/adminHome",
+    "pages/my/my",
+    "pages/message/message",
+    "pages/messageCreate/messageCreate",
+    "pages/messageDetail/messageDetail",
+    "pages/adminLogin/adminLogin",
+    "pages/search/search",
+    "pages/personalInformation/personalInformation",
+    "pages/add_product/add_product",
+    "pages/new_machine/new_machine",
+    "pages/userList/userList",
+    "pages/userListDetail/userListDetail",
+    "pages/order/order",
+    "pages/goods_list/goods_list",
+    "pages/reserve/reserve"
+  ],
+  "window": {
+    "backgroundColor": "#F6F6F6",
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#F6F6F6",
+    "navigationBarTitleText": "校园救急医护共享平台",
+    "navigationBarTextStyle": "black"
+  },
+  "sitemapLocation": "sitemap.json",
+  "tabBar": {
+    "color": "#707070",
+    "selectedColor": "#000000",
+    "list": [
+          {
+                "pagePath": "pages/home/home",
+                "text": "首页",
+                "iconPath": "/images/tabbar/home.png",
+                "selectedIconPath": "/images/tabbar/home_on.png"
+          },
+          {
+                "pagePath": "pages/goods_list/goods_list",
+                "text": "预约",
+
+                "iconPath": "/images/tabbar/publish.png",
+                "selectedIconPath": "/images/tabbar/publish_on.png"
+          },
+          {
+                "pagePath": "pages/my/my",
+                "text": "我的",
+                "iconPath": "/images/tabbar/my.png",
+                "selectedIconPath": "/images/tabbar/my_on.png"
+          }
+    ]
+},
+
+  "style": "v2",
+  "useExtendedLib": {
+    "weui":true
+  }
+
+}
